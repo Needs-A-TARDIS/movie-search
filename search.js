@@ -18,6 +18,6 @@ xhr.send(data);
 var result = xhr.responseText; 
 return result;
 }
-document.getElementById("uin").innerHTML = mysearch();
+document.getElementById("results").innerHTML = mysearch();
 
 
