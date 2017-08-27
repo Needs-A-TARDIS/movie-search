@@ -31,7 +31,13 @@ $('button').click(function() {
 
 });
 //Print the search results 
-function showResults(searchResults){	
+function showResults(searchResults){
+	//if only one search result 
+	/* if !(Array.isArray(searchResults)) {
+		//change searchResults into an array if it's not one 
+		//this prevents having to repeat the printing code 
+	} */
+	
 	for (i=0;i<searchResults.length;i++) {
 		movieID = searchResults[i].id.toString();
 		movieTitle = searchResults[i].name;
