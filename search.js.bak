@@ -15,7 +15,7 @@ $('button').click(function() {
 	  "data": "{}",
 	  "jsonpCallback": "testing",
 	  "contentType": "application/json",
-	  
+	  "dataType": "jsonp"
 	}
 
 	$.ajax(settings).done(function (response) {

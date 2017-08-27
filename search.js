@@ -21,11 +21,11 @@ $('button').click(function() {
 	$.ajax(settings).done(function (response) {
 	  console.log(response);
 	});
-} 
+})
 //Print the search results 
-function showResults(){
+/* function showResults(){
 		
-}
+} */
 //document.getElementById("results").innerHTML = mysearch();
 //https://developers.themoviedb.org/3/search/search-keywords
 
