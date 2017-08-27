@@ -31,12 +31,12 @@ $(document).ready(function () {
 	//Print the search results 
 	function showResults(searchResults){	
 		console.log("showResults called");
-		/* for (i=0;i<searchResults.length;i++) {
+		for (i=0;i<searchResults.length;i++) {
 			console.log("printing searchresults"+i.toString());
 			movieID = searchResults[i].id.toString();
 			movieTitle = searchResults[i].name;
-			document.getElementById("results").innerHTML = movieID+"/n "+movieT7itle;
-		} */
+			document.getElementById("results").innerHTML = movieID+"/n "+movieTitle;
+		}
 	}
 });
 
