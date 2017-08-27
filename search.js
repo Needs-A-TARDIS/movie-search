@@ -1,24 +1,32 @@
-function mysearch() {
-//api query & settings 
-var data = "{}";
-var query = "wonder";
-var apikey = "c86ce297941a783af9f40b9a9985424d";
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
 
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-  }
-});
-var url = "https://api.themoviedb.org/3/search/keyword?page=1&query=" +query+"&api_key="+apikey;
-xhr.open("GET", url);
+//TODO: Get the user input 
+//Get the search results from TMDB api 
+//This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery
+$('button').click(function() {
+	var burl = "https://api.themoviedb.org/3/search/keyword?page=1&query="
+	var q = "tomorrowland" 
+	var apikey = "c86ce297941a783af9f40b9a9985424d"
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": burl + q + "&api_key=" + apikey,
+	  "method": "GET",
+	  "headers": {},
+	  "data": "{}",
+	  "jsonpCallback": "testing",
+	  "contentType": "application/json",
+	  "dataType": "jsonp"
+	}
 
-xhr.send(data);
-var result = xhr.responseText; 
-return result;
+	$.ajax(settings).done(function (response) {
+	  console.log(response);
+	});
+} 
+//Print the search results 
+function showResults(){
+		
 }
-document.getElementById("results").innerHTML = mysearch();
+//document.getElementById("results").innerHTML = mysearch();
 //https://developers.themoviedb.org/3/search/search-keywords
 
 
