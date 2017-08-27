@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
 //TODO: Get the user input 
 //Get the search results from TMDB api 
 //This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery
@@ -21,12 +21,13 @@ $('button').click(function() {
 	$.ajax(settings).done(function (response) {
 	  console.log(response);
 	});
-} 
+})
 //Print the search results 
-function showResults(){
+/* function showResults(){
 		
-}
+} */
 //document.getElementById("results").innerHTML = mysearch();
 //https://developers.themoviedb.org/3/search/search-keywords
+});
 
 
