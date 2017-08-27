@@ -30,9 +30,7 @@ $(document).ready(function () {
 	//TODO: 2 Get the details of the movies 
 	//Print the search results 
 	function showResults(searchResults){	
-		console.log("showResults called");
 		for (i=0;i<searchResults.length;i++) {
-			console.log("printing searchresults"+i.toString());
 			movieID = searchResults[i].id.toString();
 			movieTitle = searchResults[i].name;
 			document.getElementById("results").innerHTML = movieID+"/n "+movieTitle;
