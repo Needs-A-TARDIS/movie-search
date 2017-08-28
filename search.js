@@ -13,7 +13,7 @@ $('button').click(function() {
 	  "method": "GET",
 	  "headers": {},
 	  "data": "{}",
-	  "jsonpCallback": "testing",
+	  "jsonpCallback": "showResults()",
 	  "contentType": "application/json",
 	  "dataType": "jsonp"
 	}
@@ -23,7 +23,6 @@ $('button').click(function() {
 	});
 })   
 //Print the search results 
-function showResults(){
 	function showResults(searchResults){	
 		console.log("showResults called");
 		for (i=0;i<searchResults.length;i++) {
@@ -33,7 +32,7 @@ function showResults(){
 			document.getElementById("results").innerHTML = movieID+"/n "+movieTitle;
 		}
 	}
-}
+
 //document.getElementById("results").innerHTML = mysearch();
 //https://developers.themoviedb.org/3/search/search-keywords
 });
