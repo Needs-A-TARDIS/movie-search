@@ -23,8 +23,8 @@ $('button').click(function() {
 	});
 })   
 //Print the search results 
-/* function showResults(){
-		function showResults(searchResults){	
+function showResults(){
+	function showResults(searchResults){	
 		console.log("showResults called");
 		for (i=0;i<searchResults.length;i++) {
 			console.log("printing searchresults"+i.toString());
@@ -33,7 +33,7 @@ $('button').click(function() {
 			document.getElementById("results").innerHTML = movieID+"/n "+movieTitle;
 		}
 	}
-} */
+}
 //document.getElementById("results").innerHTML = mysearch();
 //https://developers.themoviedb.org/3/search/search-keywords
 });
