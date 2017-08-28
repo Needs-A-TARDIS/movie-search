@@ -13,7 +13,7 @@ $('button').click(function() {
 	  "method": "GET",
 	  "headers": {},
 	  "data": "{}",
-	  "jsonpCallback": "showResults()",
+	  "jsonpCallback": "showResults",
 	  "contentType": "application/json",
 	  "dataType": "jsonp"
 	}
