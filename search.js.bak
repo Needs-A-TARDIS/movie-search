@@ -18,8 +18,8 @@ $('button').click(function() {
 	}
 
 	$.ajax(settings).done(function (response) {
-		showResults(response);
-	  console.log(response);
+		showResults(response.results);
+	    console.log(response);
 	});
 })   
 //Print the search results 
