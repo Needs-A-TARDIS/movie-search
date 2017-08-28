@@ -4,7 +4,7 @@ $(document).ready(function () {
 //This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery
 $('button').click(function() {
 	var burl = "https://api.themoviedb.org/3/search/keyword?page=1&query="
-	var q = "tomorrowland" 
+	var q = "wonder" 
 	var apikey = "c86ce297941a783af9f40b9a9985424d"
 	var settings = {
 	  "async": true,
@@ -25,12 +25,14 @@ $('button').click(function() {
 //Print the search results 
 	function showResults(searchResults){	
 		console.log("showResults called");
+		toShow = " "
 		for (i=0;i<searchResults.length;i++) {
 			console.log("printing searchresults"+i.toString());
 			movieID = searchResults[i].id.toString();
 			movieTitle = searchResults[i].name;
-			document.getElementById("results").innerHTML = movieID+"/n "+movieTitle;
+			toShow = toShow+movieID+"<br />"+movieTitle;
 		}
+		document.getElementById("results").innerHTML = toShow;
 	}
 
 //document.getElementById("results").innerHTML = mysearch();

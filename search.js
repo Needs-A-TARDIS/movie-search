@@ -25,12 +25,14 @@ $('button').click(function() {
 //Print the search results 
 	function showResults(searchResults){	
 		console.log("showResults called");
+		toShow = " "
 		for (i=0;i<searchResults.length;i++) {
 			console.log("printing searchresults"+i.toString());
 			movieID = searchResults[i].id.toString();
 			movieTitle = searchResults[i].name;
-			document.getElementById("results").innerHTML = movieID+"/n "+movieTitle;
+			toShow = toShow+movieID+" "+movieTitle+"<br />";
 		}
+		document.getElementById("results").innerHTML = toShow;
 	}
 
 //document.getElementById("results").innerHTML = mysearch();
