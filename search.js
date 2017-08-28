@@ -13,12 +13,12 @@ $('button').click(function() {
 	  "method": "GET",
 	  "headers": {},
 	  "data": "{}",
-	  "jsonpCallback": "showResults",
 	  "contentType": "application/json",
 	  "dataType": "jsonp"
 	}
 
 	$.ajax(settings).done(function (response) {
+		showResults(response);
 	  console.log(response);
 	});
 })   
