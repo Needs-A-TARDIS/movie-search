@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
 //Get the search results from TMDB api 
-/* This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery, user NoBrainer at https://stackoverflow.com/questions/699065/submitting-a-form-on-enter-with-jquery*/
+/* This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery, user NoBrainer at https://stackoverflow.com/questions/699065/submitting-a-form-on-enter-with-jquery
+List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 	
 	$('form').on('submit', goSearch);
 	function goSearch(e) {
@@ -36,13 +37,13 @@ $(document).ready(function () {
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				togStart	= "<ul class='showHide'><a href='#!'>";
-				togEnd		= "</ul>"
-				divStart	= "<br /> <li> <ul id='details'> <li>";
-				divEnd		= "<br /> <br /> </li> </ul> </li>";
-				movieDesc	= searchResults[i].overview;
-				movieTitle	= searchResults[i].title;
-				toShow = toShow+togStart+ movieTitle+divStart+movieDesc + divEnd+togEnd;
+				entryStart	= "<ul class='showHide'><a href='#!'>";
+				entryEnd	= "<br /></a></ul>"
+				detStart	= "<li> <ul id='details'>";
+				detEnd		= "<br /> <br /></ul> </li>";
+				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
+				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
+				toShow = toShow+entryStart+ movieTitle+detStart+movieDesc + detEnd+entryEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
 		}
