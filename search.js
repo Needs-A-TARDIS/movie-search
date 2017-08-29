@@ -5,8 +5,8 @@ $(document).ready(function () {
 $('button').click(function() {
 	var burl = "https://api.themoviedb.org/3/search/keyword?page=1&query="
 	//Get user input
-	var q = document.getElementById("query");
-	console.log("The query was "+q);
+	var q = document.getElementById("query").value;
+	console.log("The query was "+q);	
 	var apikey = "c86ce297941a783af9f40b9a9985424d"
 	var settings = {
 	  "async": true,
