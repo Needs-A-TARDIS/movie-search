@@ -2,9 +2,15 @@ $(document).ready(function () {
 
 //Get the search results from TMDB api 
 /* This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery, user NoBrainer at https://stackoverflow.com/questions/699065/submitting-a-form-on-enter-with-jquery*/
-	$('button').click(goSearch())
+	$('button').click(function () {
+		var q = document.getElementById("query").value;
+		console.log("The query as submitted by button was "+q);	
+		goSearch();
+	});
 	$('.input').keypress(function (e) {
 	if (e.which == 13) {
+		var q = document.getElementById("query").value;
+		console.log("The query as submitted by keypress was "+q);	
 		goSearch();
 		return false;
 	  }
@@ -13,7 +19,7 @@ $(document).ready(function () {
 		var burl = "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query="
 		//Get user input
 		var q = document.getElementById("query").value;
-		console.log("The query was "+q);	
+		console.log("The query in goSearch was "+q);	
 		var apikey = "c86ce297941a783af9f40b9a9985424d"
 		var settings = {
 		  "async": true,
