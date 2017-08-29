@@ -3,7 +3,7 @@ $(document).ready(function () {
 //Get the search results from TMDB api 
 //This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery
 $('button').click(function() {
-	var burl = "https://api.themoviedb.org/3/search/keyword?page=1&query="
+	var burl = "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query="
 	//Get user input
 	var q = document.getElementById("query").value;
 	console.log("The query was "+q);	
@@ -11,7 +11,7 @@ $('button').click(function() {
 	var settings = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": burl + q + "&api_key=" + apikey,
+	  "url": burl + q + "&language=en-US"+ "&api_key=" + apikey,
 	  "method": "GET",
 	  "headers": {},
 	  "data": "{}",
@@ -24,18 +24,23 @@ $('button').click(function() {
 	    console.log(response);
 	});
 })   
-//TODO 2: get details of the search results 
+//TODO: get details of the search results 
+
 //Print the search results 
 	function showResults(searchResults){	
-		console.log("showResults called");
-		toShow = " "
-		for (i=0;i<searchResults.length;i++) {
-			console.log("printing searchresults"+i.toString());
-			movieID = searchResults[i].id.toString();
-			movieTitle = searchResults[i].name;
-			toShow = toShow+movieID+" "+movieTitle+"<br />";
+		if (searchResults.length ==0 ) {
+			toShow = "There aren't any movies with this keyword. Try a different spelling!"
 		}
-		document.getElementById("results").innerHTML = toShow;
+		else {
+			toShow = " "
+			for (i=0;i<searchResults.length;i++) {
+				movieDesc = searchResults.overview;
+				movieTitle = searchResults[i].name;
+				toShow = toShow+movieTitle+"<br />"+movieDesc+"<br /> <br />";
+			}
+			document.getElementById("results").innerHTML = toShow;			
+		}
+
 	}
 
 //document.getElementById("results").innerHTML = mysearch();
