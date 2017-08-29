@@ -1,0 +1,4 @@
+Commit d5b297ee1438b1015410066839a84adad3721659
+"Fix showResults() with movies" 
+works properly and displays the titles and descriptions of the movies found. 
+Don't use the enter key but instead click the button after entering your text. 
