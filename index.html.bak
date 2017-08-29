@@ -9,8 +9,8 @@
 	<p> Search for a movie by its title. </p> 
 	<div id="uin">
 	<form>
-	<input type="text" id="query"/>
-	<button type="submit" >Search</button> 
+		<input type="text" id="query"/>
+		<button type="submit" >Search</button> 
 	</form>
 	</div>
 	<h2>Results: </h2>

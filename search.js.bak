@@ -15,7 +15,8 @@ $(document).ready(function () {
 		return false;
 	  }
 	}); */
-	function goSearch() {
+	$('form').on('submit', goSearch);
+	function goSearch(e) {
 		var burl = "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query="
 		//Get user input
 		var q = document.getElementById("query").value;
@@ -36,6 +37,7 @@ $(document).ready(function () {
 			showResults(response.results);
 			console.log(response);
 		});
+		return false;
 	}
 
 //Print the search results 
@@ -62,8 +64,6 @@ $(document).ready(function () {
     $("#show").click(function(){
         $("p").show();
     });
-//document.getElementById("results").innerHTML = mysearch();
-//https://developers.themoviedb.org/3/search/search-keywords
 });
 
 
