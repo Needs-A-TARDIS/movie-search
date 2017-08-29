@@ -36,10 +36,10 @@ $(document).ready(function () {
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				togStart	= "<div id='showHide'>";
-				togEnd		= "</div>"
-				divStart	= "<br /> <div id='details'>";
-				divEnd		= "<br /> <br /> </div>";
+				togStart	= "<ul id='showHide'><a href='#!'>";
+				togEnd		= "</ul>"
+				divStart	= "<br /> <li id='details'>";
+				divEnd		= "<br /> <br /> </li>";
 				movieDesc	= searchResults[i].overview;
 				movieTitle	= searchResults[i].title;
 				toShow = toShow+togStart+ movieTitle+divStart+movieDesc + divEnd+togEnd;
