@@ -8,7 +8,7 @@
 <body>
 	<p> Search for a movie by its title. </p> 
 	<div id="uin">
-	<form onsubmit="return goSearch()">
+	<form onsubmit="goSearch()">
 	<input type="text" id="query"/>
 	<button type="submit" >Search</button> 
 	</form>

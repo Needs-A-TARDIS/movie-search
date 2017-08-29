@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 //Get the search results from TMDB api 
 /* This code was made with help from W3C schools JQuery & JavaScript tutorials and StackOverflow user PhearOfRayne at https://stackoverflow.com/questions/14152276/themoviedb-json-api-with-jquery, user NoBrainer at https://stackoverflow.com/questions/699065/submitting-a-form-on-enter-with-jquery*/
-	$('button').click(function () {
+	$('sbutton').click(function () {
 		// var q = document.getElementById("query").value;
 		// console.log("The query as submitted by button was "+q);	
 		goSearch();
