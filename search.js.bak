@@ -62,6 +62,8 @@ $(document).ready(function () {
     $("#show").click(function(){
         $("p").show();
     });
+//document.getElementById("results").innerHTML = mysearch();
+//https://developers.themoviedb.org/3/search/search-keywords
 });
 
 
