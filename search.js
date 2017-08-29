@@ -36,21 +36,22 @@ $(document).ready(function () {
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				togButton	= "<button id='showHide'> min </button> <br />"
-				divStart	= "<br /> <div id='details'>" 
-				divEnd		= "<br /> <br /> </div>"
+				togStart	= "<div id='showHide'>";
+				togEnd		= "</div>"
+				divStart	= "<br /> <div id='details'>";
+				divEnd		= "<br /> <br /> </div>";
 				movieDesc	= searchResults[i].overview;
 				movieTitle	= searchResults[i].title;
-				toShow = toShow+togButton+ movieTitle+divStart+movieDesc + divEnd;
+				toShow = toShow+togStart+ movieTitle+divStart+movieDesc + divEnd+togEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
 		}
 
 	}
 //Toggle showing & hiding details  
-	$("#showHide").click(function(){
+	$("#showHide").on("click",function(){
 		console.log("You tried to minimize/maximize the descrtiption");
-        $("#details").toggle();
+        $(this).next("#details").toggle();
     });
 });
 
