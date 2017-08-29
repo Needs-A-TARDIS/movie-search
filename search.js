@@ -34,8 +34,8 @@ $('button').click(function() {
 		else {
 			toShow = " "
 			for (i=0;i<searchResults.length;i++) {
-				movieDesc = searchResults.overview;
-				movieTitle = searchResults[i].name;
+				movieDesc = searchResults[i].overview;
+				movieTitle = searchResults[i].title;
 				toShow = toShow+movieTitle+"<br />"+movieDesc+"<br /> <br />";
 			}
 			document.getElementById("results").innerHTML = toShow;			
