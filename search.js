@@ -36,7 +36,7 @@ $(document).ready(function () {
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				togButton	= "<button id='showHide' value='min'> </button> <br />"
+				togButton	= "<button id='showHide'> min </button> <br />"
 				divStart	= "<br /> <div id='details'>" 
 				divEnd		= "<br /> <br /> </div>"
 				movieDesc	= searchResults[i].overview;
@@ -49,6 +49,7 @@ $(document).ready(function () {
 	}
 //Toggle showing & hiding details  
 	$("#showHide").click(function(){
+		console.log("You tried to minimize/maximize the descrtiption");
         $("#details").toggle();
     });
 });
