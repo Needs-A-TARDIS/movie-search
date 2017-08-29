@@ -8,7 +8,6 @@ $(document).ready(function () {
 		var burl = "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query="
 		//Get user input
 		var q = document.getElementById("query").value;
-		console.log("The query in goSearch was "+q);	
 		var apikey = "c86ce297941a783af9f40b9a9985424d"
 		var settings = {
 		  "async": true,
@@ -37,20 +36,20 @@ $(document).ready(function () {
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				movieDesc = searchResults[i].overview;
-				movieTitle = searchResults[i].title;
-				toShow = toShow+movieTitle+"<br />"+movieDesc+"<br /> <br />";
+				togButton	= "<button id='showHide' value='min'> </button> <br />"
+				divStart	= "<br /> <div id='details'>" 
+				divEnd		= "<br /> <br /> </div>"
+				movieDesc	= searchResults[i].overview;
+				movieTitle	= searchResults[i].title;
+				toShow = toShow+togButton+ movieTitle+divStart+movieDesc + divEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
 		}
 
 	}
-//Show/hide buttons 
-	$("#hide").click(function(){
-        $("p").hide();
-    });
-    $("#show").click(function(){
-        $("p").show();
+//Toggle showing & hiding details  
+	$("#showHide").click(function(){
+        $("#details").toggle();
     });
 });
 
