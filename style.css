@@ -1,7 +1,7 @@
 body {
     background-color: #636363;
 	color: white;
-	font: sans-serif;
+	font-family: 'Raleway', Helvetica,sans-serif;
 }
 h4 {
 	border-style:none;
@@ -9,7 +9,7 @@ h4 {
     border-radius:10px;
     background-color:#85c7f2;
 	color: black;
-	font: monospace;
+	font-family: 'Arvo', Times, monospace;
 }
 table {
 	border:none;
