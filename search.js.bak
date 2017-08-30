@@ -48,7 +48,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				imgHTML		= "<img src='"+movieImg+"' alt="+alttext+">";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
 				toShow = toShow+
-						"<table = 'mDetails'>"+
+						"<table id= 'mDetails'>"+
 							"<thead>"+"<tr>"+
 								"<th>"+movieTitle+"</th>"+
 							"</tr>"+"</thead>"+
