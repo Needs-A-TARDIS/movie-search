@@ -39,11 +39,9 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			for (i=0;i<searchResults.length;i++) {
 				entryStart	= "<ul class='showHide'><a href='#!'>";
 				entryEnd	= "<br /></a></ul>"
-				detStart	= "<li> <ul id='details'>";
-				detEnd		= "<br /> <br /></ul> </li>";
 				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
-				movieTitle	= searchResults[i].title;
-				toShow = toShow+entryStart+ movieTitle+detStart+movieDesc + detEnd+entryEnd;
+				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
+				toShow = toShow+entryStart+ movieTitle+movieDesc +entryEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
 		}
@@ -52,7 +50,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 //Toggle showing & hiding details  
 	$(".showHide").click(function(){
 		console.log("You tried to minimize/maximize the descrtiption");
-        $(this).next("ul").toggle();
+        $(this).children().toggle();
     });
 });
 
