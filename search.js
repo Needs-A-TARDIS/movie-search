@@ -50,7 +50,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				toShow = toShow+
 						"<table>"+
 							"<thead>"+"<tr>"+
-								"<th>"+movieTitle+"</th>"+
+								"<th class='show'>"+movieTitle+"</th>"+
 							"</tr>"+"</thead>"+
 							"<tbody>"+"<tr>"+
 								"<td>"+imgHTML+"</td>"+
@@ -59,9 +59,15 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 						"</table>";
 				//Toggle showing & hiding details  
 				//Bind toggle event to each table 
-				$("thead").on("click",function(){
+				/* $("th#show").on("click",function(){
 					console.log("You tried to hide or show the details.");
 					$(this).next("tbody").toggle();
+				}); */
+				/* This code comes from https://stackoverflow.com/questions/17336564/hide-tables-tbody-when-clicked-on-thead */
+				$(document).on('click','thead',function(){
+					console.log("You tried to hide or show the details.");					
+					$(this).closest('table').find('tbody').toggle();
+					$(this).closest('table').find('tfoot').toggle();
 				});
 			}
 			
