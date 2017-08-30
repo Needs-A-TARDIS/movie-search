@@ -17,7 +17,7 @@
 	</form>
 	<h2>Results: </h2>
 	<div id='results'> 
-	<p> Text will be replaced. </p>
+	<p> Nothing to show. Try typing something in the search bar. </p>
 	</div> 
 </body>
 </html> 
