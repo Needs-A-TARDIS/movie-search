@@ -37,8 +37,6 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				entryStart	= "<ul class='showHide'>";
-				entryEnd	= "<br /></ul>";
 				movieDesc	= searchResults[i].overview;
 				alttext 	= "movie poster for"+searchResults[i].title+" ";
 				if (searchResults[i].poster_path == null) {
@@ -50,17 +48,19 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				imgHTML		= "<img src='"+movieImg+"' alt="+alttext+">";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
 				toShow = toShow+
-					entryStart+
-						movieTitle+
-						"<li>"+"<table>"+"<tr>"+
-							"<td>"+imgHTML+"</td>"+
-							"<td>"+movieDesc+"</td>"+
-						"</tr>"+"</table>"+"</li>"+
-					entryEnd;
+						"<table = 'mDetails'>"+
+							"<thead>"+"<tr>"+
+								"<th>"+movieTitle+"</th>"+
+							"</tr>"+"</thead>"+
+							"<tbody>"+"<tr>"+
+								"<td>"+imgHTML+"</td>"+
+								"<td>"+movieDesc+"</td>"+
+							"</tbody>"+"</tr>"+
+						"</table>";
 			}
 			//Toggle showing & hiding details  
-			$(".showHide").on("click",function(){
-				$(this).find("li").toggle();
+			$(".mDetails").on("click",function(){
+				$(this).find("tbody").toggle();
 			});
 		}
 		document.getElementById("results").innerHTML = toShow;			
