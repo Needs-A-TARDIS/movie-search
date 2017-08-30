@@ -39,15 +39,22 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			for (i=0;i<searchResults.length;i++) {
 				entryStart	= "<ul class='showHide'>";
 				entryEnd	= "<br /></ul>";
-				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
+				movieDesc	= searchResults[i].overview;
+				movieImg	= "http://image.tmdb.org/t/p/w185//"+searchResults[i].poster_path;
+				imgHTML		= "<img src='"+movieImg+"' alt='"+"movie poster for"+searchResults[i].title+"'>";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
-				toShow = toShow+entryStart+""+ movieTitle+movieDesc +entryEnd;
+				toShow = toShow+
+					entryStart+
+						movieTitle+
+						"<li>"+"<tr>"+
+							movieDesc+
+						"</tr>"+"</li>"+
+					entryEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
 			//Toggle showing & hiding details  
 			$(".showHide").on("click",function(){
-				console.log("You tried to minimize/maximize the descrtiption");
-				$(this).children().toggle();
+				$(this).find("li").toggle();
 			});
 		}
 
