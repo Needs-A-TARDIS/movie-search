@@ -48,7 +48,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				imgHTML		= "<img src='"+movieImg+"' alt="+alttext+">";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
 				toShow = toShow+
-						"<table class= 'mDetails'>"+
+						"<table>"+
 							"<thead>"+"<tr>"+
 								"<th>"+movieTitle+"</th>"+
 							"</tr>"+"</thead>"+
@@ -59,16 +59,16 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 						"</table>";
 				//Toggle showing & hiding details  
 				//Bind toggle event to each table 
-				$(".mDetails").on("click",function(){
+				$("thead").on("click",function(){
 					console.log("You tried to hide or show the details.");
-					$(this).find("tbody").toggle();
+					$(this).next("tbody").toggle();
 				});
 			}
 			
 		}
 		document.getElementById("results").innerHTML = toShow;			
 		//looking for the events to see if they're even bound
-		console.log($.data($(".mDetails")[0],'events'));
+		//console.log($.data($(".mDetails")[0],'events'));
 		
 	}
 
