@@ -37,8 +37,6 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				entryStart	= "<ul class='showHide'>";
-				entryEnd	= "<br /></ul>";
 				movieDesc	= searchResults[i].overview;
 				alttext 	= "movie poster for"+searchResults[i].title+" ";
 				if (searchResults[i].poster_path == null) {
@@ -50,7 +48,6 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				imgHTML		= "<img src='"+movieImg+"' alt="+alttext+">";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
 				toShow = toShow+
-					entryStart+
 						"<table = 'mDetails'>"+
 							"<thead>"+"<tr>"+
 								"<th>"+movieTitle+"</th>"+
@@ -59,8 +56,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 								"<td>"+imgHTML+"</td>"+
 								"<td>"+movieDesc+"</td>"+
 							"</tbody>"+"</tr>"+
-						"</table>"+
-					entryEnd;
+						"</table>";
 			}
 			//Toggle showing & hiding details  
 			$(".mDetails").on("click",function(){
