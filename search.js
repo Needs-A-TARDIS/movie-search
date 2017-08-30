@@ -39,7 +39,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			for (i=0;i<searchResults.length;i++) {
 				boolean resultsCreated = true;
 				entryStart	= "<ul class='showHide'>";
-				entryEnd	= "<br /></ul>"
+				entryEnd	= "<br /></ul>";
 				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
 				toShow = toShow+entryStart+""+ movieTitle+movieDesc +entryEnd;
