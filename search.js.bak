@@ -52,10 +52,10 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				toShow = toShow+
 					entryStart+
 						movieTitle+
-						"<li>"+"<tr>"+
+						"<li>"+"<table>"+"<tr>"+
 							"<td>"+imgHTML+"</td>"+
 							"<td>"+movieDesc+"</td>"+
-						"</tr>"+"</li>"+
+						"</tr>"+"</table>"+"</li>"+
 					entryEnd;
 			}
 			//Toggle showing & hiding details  

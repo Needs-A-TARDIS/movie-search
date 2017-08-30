@@ -45,7 +45,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 					alttext = "No"+alttext;
 				} 
 				else {
-					movieImg	= "http://image.tmdb.org/t/p/w185//"+searchResults[i].poster_path;
+					movieImg	= "https://image.tmdb.org/t/p/w185//"+searchResults[i].poster_path;
 				} 
 				imgHTML		= "<img src='"+movieImg+"' alt="+alttext+">";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
