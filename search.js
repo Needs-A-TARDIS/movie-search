@@ -57,12 +57,14 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 								"<td>"+movieDesc+"</td>"+
 							"</tbody>"+"</tr>"+
 						"</table>";
+				//Toggle showing & hiding details  
+				//Bind toggle event to each table 
+				$(".mDetails").on("click",function(){
+					console.log("You tried to hide or show the details.");
+					$(this).find("tbody").toggle();
+				});
 			}
-			//Toggle showing & hiding details  
-			$(".mDetails").on("click",function(){
-				console.log("You tried to hide or show the details.");
-				$(this).find("tbody").toggle();
-			});
+			
 		}
 		document.getElementById("results").innerHTML = toShow;			
 
