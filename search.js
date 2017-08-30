@@ -64,19 +64,20 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 					$(this).next("tbody").toggle();
 				}); */
 				/* This code comes from https://stackoverflow.com/questions/17336564/hide-tables-tbody-when-clicked-on-thead */
-				$(document).on('click','thead',function(){
+				
+			}
+			
+		}
+		$(document).on('click','thead',function(){
 					console.log("You tried to hide or show the details by clicking in head.");
 					console.log(this);
 					$(this).closest('tbody').toggle();
 				});
-				$(document).on('click','tbody',function(){
-					console.log("You tried to hide or show the details by clicking in body.");	
-					console.log(this);
-					$(this).toggle();
-				});
-			}
-			
-		}
+		$(document).on('click','tbody',function(){
+			console.log("You tried to hide or show the details by clicking in body.");	
+			console.log(this);
+			$(this).toggle();
+		});
 		document.getElementById("results").innerHTML = toShow;			
 		//looking for the events to see if they're even bound
 		//console.log($.data($(".mDetails")[0],'events'));
