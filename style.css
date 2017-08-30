@@ -5,7 +5,6 @@ body {
 }
 h4 {
 	border-style:none;
-    border-width:2px 2px 2px 2px;
     border-radius:10px;
     background-color:#85c7f2;
 	color: black;
@@ -15,7 +14,6 @@ table {
 	border:none;
 }
 tbody {
-	background-color: #d1d1d1;
 	color: black;
 }
 #results {
