@@ -10,12 +10,15 @@ h4 {
     background-color:#85c7f2;
 	color: black;
 	font-family: 'Arvo', Times, monospace;
+	word-wrap: break-word;
+	width: 185px;
 }
 table {
 	border:none;
 }
 thead {
 	width: 185px;
+	word-wrap: break-word;
 }
 tbody {
 	color: black;

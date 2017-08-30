@@ -11,6 +11,7 @@ h4 {
 	color: black;
 	font-family: 'Arvo', Times, monospace;
 	word-wrap: break-word;
+	width: 185px;
 }
 table {
 	border:none;
@@ -21,6 +22,7 @@ thead {
 }
 tbody {
 	color: black;
+	display: none;
 }
 #results {
 	background-color: #dbdbdb;

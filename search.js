@@ -57,7 +57,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 								"<td>"+movieDesc+"</td>"+
 							"</tbody>"+"</tr>"+
 						"</table>";
-				
+				$('tbody').hide();
 			}
 			
 		}
