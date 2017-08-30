@@ -68,7 +68,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 		}
 		document.getElementById("results").innerHTML = toShow;			
 		//looking for the events to see if they're even bound
-		console.log($(".mDetails").data("events").click);
+		console.log(jQuery._data($(".mDetails"),'events'));
 		
 	}
 
