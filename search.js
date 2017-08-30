@@ -37,7 +37,6 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				boolean resultsCreated = true;
 				entryStart	= "<ul class='showHide'>";
 				entryEnd	= "<br /></ul>";
 				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
