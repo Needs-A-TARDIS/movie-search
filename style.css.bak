@@ -13,6 +13,9 @@ h4 {
 table {
 	border:none;
 }
+thead {
+	width: 185px;
+}
 tbody {
 	color: black;
 }

@@ -2,6 +2,7 @@ body {
     background-color: #636363;
 	color: white;
 	font-family: 'Raleway', Helvetica,sans-serif;
+	word-wrap: break-word;
 }
 h4 {
 	border-style:none;
