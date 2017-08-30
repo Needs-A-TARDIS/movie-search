@@ -37,6 +37,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
+				boolean resultsCreated = true;
 				entryStart	= "<ul class='showHide'>";
 				entryEnd	= "<br /></ul>"
 				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
@@ -44,14 +45,15 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				toShow = toShow+entryStart+""+ movieTitle+movieDesc +entryEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
+			//Toggle showing & hiding details  
+			$(".showHide").on("click",function(){
+				console.log("You tried to minimize/maximize the descrtiption");
+				$(this).children().toggle();
+			});
 		}
 
 	}
-//Toggle showing & hiding details  
-	$(".showHide").on("click",function(){
-		console.log("You tried to minimize/maximize the descrtiption");
-        $(this).children().toggle();
-    });
+
 });
 
 
