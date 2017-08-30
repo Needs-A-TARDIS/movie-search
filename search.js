@@ -69,10 +69,11 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			
 		}
 		$(document).on('click','thead',function(){
-					console.log("You tried to hide or show the details by clicking in head.");
-					console.log(this);
-					$(this).closest('tbody').toggle();
-				});
+			console.log("You tried to hide or show the details by clicking in head.");
+			console.log(this);
+			console.log(this.closest('tbody'));
+			$(this).closest('tbody').toggle();
+		});
 		$(document).on('click','tbody',function(){
 			console.log("You tried to hide or show the details by clicking in body.");	
 			console.log(this);
