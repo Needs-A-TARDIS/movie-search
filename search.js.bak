@@ -60,6 +60,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			}
 			//Toggle showing & hiding details  
 			$(".mDetails").on("click",function(){
+				console.log("You tried to hide or show the details.");
 				$(this).find("tbody").toggle();
 			});
 		}
