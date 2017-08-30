@@ -52,12 +52,12 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 						"</tr>"+"</li>"+
 					entryEnd;
 			}
-			document.getElementById("results").innerHTML = toShow;			
 			//Toggle showing & hiding details  
 			$(".showHide").on("click",function(){
 				$(this).find("li").toggle();
 			});
 		}
+		document.getElementById("results").innerHTML = toShow;			
 
 	}
 

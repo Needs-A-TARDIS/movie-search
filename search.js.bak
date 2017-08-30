@@ -47,16 +47,18 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 					entryStart+
 						movieTitle+
 						"<li>"+"<tr>"+
-							movieDesc+
+							"<td>"+imgHTML+"</td>"+
+							"<td>"+movieDesc+"</td>"+
 						"</tr>"+"</li>"+
 					entryEnd;
 			}
-			document.getElementById("results").innerHTML = toShow;			
 			//Toggle showing & hiding details  
 			$(".showHide").on("click",function(){
 				$(this).find("li").toggle();
 			});
 		}
+		document.getElementById("results").innerHTML = toShow;			
+			
 
 	}
 
