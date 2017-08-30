@@ -40,16 +40,22 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 				entryStart	= "<ul class='showHide'>";
 				entryEnd	= "<br /></ul>";
 				movieDesc	= searchResults[i].overview;
-				movieImg	= "http://image.tmdb.org/t/p/w185//"+searchResults[i].poster_path;
-				imgHTML		= "<img src='"+movieImg+"' alt='"+"movie poster for"+searchResults[i].title+"'>";
+				alttext 	= "movie poster for"+searchResults[i].title+" ";
+				if (searchResults[i].poster_path == null) {
+					alttext = "No"+alttext;
+				} 
+				else {
+					movieImg	= "http://image.tmdb.org/t/p/w185//"+searchResults[i].poster_path;
+				} 
+				imgHTML		= "<img src='"+movieImg+"' alt="+alttext+">";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
 				toShow = toShow+
 					entryStart+
 						movieTitle+
-						"<li>"+"<tr>"+
+						"<li>"+"<table>"+"<tr>"+
 							"<td>"+imgHTML+"</td>"+
 							"<td>"+movieDesc+"</td>"+
-						"</tr>"+"</li>"+
+						"</tr>"+"</table>"+"</li>"+
 					entryEnd;
 			}
 			//Toggle showing & hiding details  
