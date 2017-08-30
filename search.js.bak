@@ -37,11 +37,11 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 			toShow = " "
 			//Print details of each movie here 
 			for (i=0;i<searchResults.length;i++) {
-				entryStart	= "<ul class='showHide'><a href='#!'>";
-				entryEnd	= "<br /></a></ul>"
+				entryStart	= "<ul class='showHide'>";
+				entryEnd	= "<br /></ul>"
 				movieDesc	= "<li>"+searchResults[i].overview+ "</li>";
 				movieTitle	= "<h4>"+ searchResults[i].title + "</h4>";
-				toShow = toShow+entryStart+ movieTitle+movieDesc +entryEnd;
+				toShow = toShow+entryStart+""+ movieTitle+movieDesc +entryEnd;
 			}
 			document.getElementById("results").innerHTML = toShow;			
 		}

@@ -48,7 +48,7 @@ List expansion comes with help from http://jsfiddle.net/ytXFQ/ */
 
 	}
 //Toggle showing & hiding details  
-	$(".showHide").click(function(){
+	$(".showHide").on("click",function(){
 		console.log("You tried to minimize/maximize the descrtiption");
         $(this).children().toggle();
     });
